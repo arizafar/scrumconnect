@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1><span class="label label-default">Some Useful Government Service</span></h1>
+    <br>
+    <br>
+
+    <form action="/register" method="post" class="form-horizontal" id="myform">
+    <!-- <form action="/register" method="post" class="form-horizontal" id="myform" onsubmit="return submitForm()"> -->
+
+        <div class="form-group">
+            <label for="name" class="control-label col-xs-2">Name</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name = "name" id="name">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sex" class="control-label col-xs-2">Sex</label>
+            <div class="col-xs-10">
+              <input type="radio" name="sex" id="male" value="male">&nbsp&nbsp&nbspMale
+              <input type="radio" name="sex" id="female" value="female">&nbsp&nbsp&nbspFemale
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="age" class="control-label col-xs-2">Age</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" name="age" id="age" placeholder="Age">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="country" class="control-label col-xs-2">Country</label>
+            <div class="col-xs-10">
+              <select class="form-control" name="country" id="country">
+                <% data.forEach((ele) => { %>
+                  <option><%= ele.name %></option>
+                <%  })  %>
+              </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </body>
+  </html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+  </style>
+  <body>
+    <% if (errors.length == 0) { %>
+    <h1>Error 404 Page Not Found</h1>
+    <%} else { %>
+      <h1>Error Invalid Inputs</h1>
+      <% errors.forEach((error) => { %>
+        <h2><%= error %></h2>
+      <% }) %>
+    <% } %>
+  </body>
+</html>
